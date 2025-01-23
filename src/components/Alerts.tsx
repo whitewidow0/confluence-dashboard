@@ -18,7 +18,7 @@ const alerts = [
 
 export const Alerts = () => {
   return (
-    <Card className="p-6 bg-white/80 backdrop-blur-sm animate-fadeIn">
+    <Card className="p-6 bg-white/80 backdrop-blur-sm animate-fadeIn transition-all duration-300 hover:shadow-[0_0_15px_rgba(155,135,245,0.2)] border border-gray-200">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-semibold text-gray-800">Recent Alerts</h3>
         <Bell className="h-5 w-5 text-gray-400" />
@@ -32,7 +32,7 @@ export const Alerts = () => {
             <div className="flex items-center space-x-3">
               <div
                 className={`w-2 h-2 rounded-full ${
-                  alert.type === "warning" ? "bg-warning-DEFAULT" : "bg-success-DEFAULT"
+                  alert.type === "warning" ? "bg-[#9b87f5]" : "bg-[#7E69AB]"
                 }`}
               />
               <span className="text-sm text-gray-700">{alert.message}</span>
