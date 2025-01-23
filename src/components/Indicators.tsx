@@ -4,7 +4,7 @@ import { Progress } from "@/components/ui/progress";
 export const Indicators = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 animate-fadeIn">
-      <Card className="p-6 bg-white/80 backdrop-blur-sm">
+      <Card className="p-6 bg-white/80 backdrop-blur-sm overflow-hidden">
         <h3 className="text-lg font-semibold text-gray-800 mb-4">RSI</h3>
         <div className="space-y-4">
           <div>
@@ -14,7 +14,7 @@ export const Indicators = () => {
             </div>
             <Progress value={72} className="h-2" />
           </div>
-          <div className="flex justify-between text-sm text-gray-500">
+          <div className="flex justify-between text-sm text-gray-500 flex-wrap">
             <span>Oversold</span>
             <span>Neutral</span>
             <span>Overbought</span>
@@ -22,7 +22,7 @@ export const Indicators = () => {
         </div>
       </Card>
 
-      <Card className="p-6 bg-white/80 backdrop-blur-sm">
+      <Card className="p-6 bg-white/80 backdrop-blur-sm overflow-hidden">
         <h3 className="text-lg font-semibold text-gray-800 mb-4">MVRV Z-Score</h3>
         <div className="space-y-4">
           <div>
@@ -32,7 +32,7 @@ export const Indicators = () => {
             </div>
             <Progress value={50} className="h-2" />
           </div>
-          <div className="flex justify-between text-sm text-gray-500">
+          <div className="flex justify-between text-sm text-gray-500 flex-wrap">
             <span>Undervalued</span>
             <span>Fair Value</span>
             <span>Overvalued</span>

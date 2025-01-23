@@ -12,6 +12,7 @@ export const Header = () => {
         </h1>
         <nav className="hidden md:flex space-x-6">
           <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Dashboard</a>
+          <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Rules</a>
           <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Heatmap</a>
           <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Analysis</a>
         </nav>
