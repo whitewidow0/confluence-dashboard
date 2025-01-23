@@ -7,7 +7,7 @@ export const Header = () => {
   return (
     <header className="w-full px-6 py-4 bg-white/80 backdrop-blur-lg border-b border-gray-100 flex items-center justify-between animate-fadeIn">
       <div className="flex items-center space-x-8">
-        <h1 className="text-2xl font-semibold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
+        <h1 className="text-2xl font-semibold bg-gradient-to-r from-[#9b87f5] to-[#7E69AB] bg-clip-text text-transparent relative before:absolute before:inset-0 before:bg-gradient-to-r before:from-[#9b87f5]/50 before:to-[#7E69AB]/50 before:blur-lg before:-z-10 before:opacity-75">
           Market Pulse
         </h1>
         <nav className="hidden md:flex space-x-6">

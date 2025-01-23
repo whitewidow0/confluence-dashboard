@@ -11,7 +11,7 @@ const data = [
 
 export const Chart = () => {
   return (
-    <Card className="p-6 bg-white/80 backdrop-blur-sm h-[400px] animate-fadeIn transition-all duration-300 hover:shadow-[0_0_15px_rgba(155,135,245,0.2)] border border-gray-200">
+    <Card className="relative p-6 bg-white/80 backdrop-blur-sm h-[400px] animate-fadeIn transition-all duration-300 before:absolute before:w-[101%] before:h-[101%] before:-z-10 before:rounded-lg before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:opacity-0 before:transition-opacity hover:before:opacity-100 before:bg-gradient-to-r before:from-[#9b87f5]/0 before:via-[#9b87f5]/10 before:to-[#9b87f5]/0 border border-gray-200">
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-lg font-semibold text-gray-800">Price Chart</h2>
         <div className="flex space-x-2">
