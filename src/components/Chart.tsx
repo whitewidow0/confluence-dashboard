@@ -11,26 +11,25 @@ const data = [
 
 export const Chart = () => {
   return (
-    <Card className="p-6 bg-gray-800/50 backdrop-blur-sm border-gray-700 h-[400px] animate-fadeIn hover:shadow-[0_0_20px_rgba(74,222,128,0.05)]">
+    <Card className="p-6 bg-white/80 backdrop-blur-sm h-[400px] animate-fadeIn">
       <div className="flex justify-between items-center mb-6">
-        <h2 className="text-lg font-semibold text-white">Price Chart</h2>
+        <h2 className="text-lg font-semibold text-gray-800">Price Chart</h2>
         <div className="flex space-x-2">
-          <button className="px-3 py-1 text-sm text-gray-300 hover:bg-gray-700/50 rounded-md transition-colors">1D</button>
-          <button className="px-3 py-1 text-sm text-gray-300 hover:bg-gray-700/50 rounded-md transition-colors">1W</button>
-          <button className="px-3 py-1 text-sm text-white bg-gray-700/50 rounded-md">1M</button>
+          <button className="px-3 py-1 text-sm text-gray-600 hover:bg-gray-100 rounded-md transition-colors">1D</button>
+          <button className="px-3 py-1 text-sm text-gray-600 hover:bg-gray-100 rounded-md transition-colors">1W</button>
+          <button className="px-3 py-1 text-sm text-white bg-gray-900 rounded-md">1M</button>
         </div>
       </div>
       <ResponsiveContainer width="100%" height="100%">
         <LineChart data={data}>
-          <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
-          <XAxis dataKey="date" stroke="#9CA3AF" />
-          <YAxis stroke="#9CA3AF" />
+          <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
+          <XAxis dataKey="date" stroke="#666" />
+          <YAxis stroke="#666" />
           <Tooltip
             contentStyle={{
-              backgroundColor: '#1F2937',
-              border: '1px solid #374151',
+              backgroundColor: 'white',
+              border: '1px solid #f0f0f0',
               borderRadius: '8px',
-              color: '#fff',
             }}
           />
           <Line
