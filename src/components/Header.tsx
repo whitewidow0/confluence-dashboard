@@ -5,25 +5,25 @@ export const Header = () => {
   const currentTime = new Date().toLocaleTimeString();
 
   return (
-    <header className="w-full px-6 py-4 bg-white/80 backdrop-blur-lg border-b border-gray-100 flex items-center justify-between animate-fadeIn">
+    <header className="w-full px-6 py-4 bg-gray-800/80 backdrop-blur-lg border-b border-gray-700 flex items-center justify-between animate-fadeIn">
       <div className="flex items-center space-x-8">
-        <h1 className="text-2xl font-semibold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
+        <h1 className="text-2xl font-semibold bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent hover:shadow-[0_0_30px_rgba(74,222,128,0.2)] transition-all duration-300">
           Market Pulse
         </h1>
         <nav className="hidden md:flex space-x-6">
-          <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Dashboard</a>
-          <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Rules</a>
-          <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Heatmap</a>
-          <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Analysis</a>
+          <a href="#" className="text-gray-300 hover:text-white hover:shadow-[0_0_15px_rgba(74,222,128,0.1)] transition-all">Dashboard</a>
+          <a href="#" className="text-gray-300 hover:text-white hover:shadow-[0_0_15px_rgba(74,222,128,0.1)] transition-all">Rules</a>
+          <a href="#" className="text-gray-300 hover:text-white hover:shadow-[0_0_15px_rgba(74,222,128,0.1)] transition-all">Heatmap</a>
+          <a href="#" className="text-gray-300 hover:text-white hover:shadow-[0_0_15px_rgba(74,222,128,0.1)] transition-all">Analysis</a>
         </nav>
       </div>
       <div className="flex items-center space-x-4">
-        <span className="text-sm text-gray-500">{currentTime}</span>
-        <Button variant="ghost" size="icon">
-          <Bell className="h-5 w-5 text-gray-600" />
+        <span className="text-sm text-gray-400">{currentTime}</span>
+        <Button variant="ghost" size="icon" className="text-gray-300 hover:text-white hover:bg-gray-700/50">
+          <Bell className="h-5 w-5" />
         </Button>
-        <Button variant="ghost" size="icon">
-          <Settings className="h-5 w-5 text-gray-600" />
+        <Button variant="ghost" size="icon" className="text-gray-300 hover:text-white hover:bg-gray-700/50">
+          <Settings className="h-5 w-5" />
         </Button>
       </div>
     </header>
