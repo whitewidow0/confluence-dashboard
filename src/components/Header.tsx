@@ -25,10 +25,31 @@ export const Header = () => {
             <div className="absolute inset-0 -z-10 opacity-0 group-hover:opacity-100 blur-lg bg-[#9b87f5]/20 transition-opacity" />
           </Link>
           <Link 
-            to="/rules" 
-            className={`${isActiveLink("/rules")} hover:text-[#9b87f5] transition-colors relative group`}
+            to="/major-top" 
+            className={`${isActiveLink("/major-top")} hover:text-[#9b87f5] transition-colors relative group`}
           >
-            Rules
+            Major Top
+            <div className="absolute inset-0 -z-10 opacity-0 group-hover:opacity-100 blur-lg bg-[#9b87f5]/20 transition-opacity" />
+          </Link>
+          <Link 
+            to="/major-bottom" 
+            className={`${isActiveLink("/major-bottom")} hover:text-[#9b87f5] transition-colors relative group`}
+          >
+            Major Bottom
+            <div className="absolute inset-0 -z-10 opacity-0 group-hover:opacity-100 blur-lg bg-[#9b87f5]/20 transition-opacity" />
+          </Link>
+          <Link 
+            to="/local-top" 
+            className={`${isActiveLink("/local-top")} hover:text-[#9b87f5] transition-colors relative group`}
+          >
+            Local Top
+            <div className="absolute inset-0 -z-10 opacity-0 group-hover:opacity-100 blur-lg bg-[#9b87f5]/20 transition-opacity" />
+          </Link>
+          <Link 
+            to="/local-bottom" 
+            className={`${isActiveLink("/local-bottom")} hover:text-[#9b87f5] transition-colors relative group`}
+          >
+            Local Bottom
             <div className="absolute inset-0 -z-10 opacity-0 group-hover:opacity-100 blur-lg bg-[#9b87f5]/20 transition-opacity" />
           </Link>
           <Link 

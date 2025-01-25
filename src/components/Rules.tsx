@@ -2,7 +2,11 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
 
-export const Rules = () => {
+interface RulesProps {
+  defaultTab?: "majorTop" | "majorBottom" | "localTop" | "localBottom";
+}
+
+export const Rules = ({ defaultTab = "majorTop" }: RulesProps) => {
   const [rules, setRules] = useState({
     majorTop: "Enter your Major Top identification rules here...",
     majorBottom: "Enter your Major Bottom identification rules here...",
@@ -21,7 +25,7 @@ export const Rules = () => {
     <div className="p-6 bg-white/80 backdrop-blur-sm rounded-lg animate-fadeIn relative group">
       <div className="absolute inset-0 -z-10 opacity-0 group-hover:opacity-100 blur-lg bg-[#9b87f5]/10 transition-opacity rounded-lg" />
       <h2 className="text-2xl font-semibold mb-6 text-gray-800">Trading Rules</h2>
-      <Tabs defaultValue="majorTop" className="w-full">
+      <Tabs defaultValue={defaultTab} className="w-full">
         <TabsList className="mb-4">
           <TabsTrigger value="majorTop">Major Top</TabsTrigger>
           <TabsTrigger value="majorBottom">Major Bottom</TabsTrigger>
