@@ -4,9 +4,10 @@ import { useState } from "react";
 
 export const Rules = () => {
   const [rules, setRules] = useState({
-    trading: "Enter your trading rules here...",
-    risk: "Enter your risk management rules here...",
-    psychology: "Enter your trading psychology rules here..."
+    majorTop: "Enter your Major Top identification rules here...",
+    majorBottom: "Enter your Major Bottom identification rules here...",
+    localTop: "Enter your Local Top identification rules here...",
+    localBottom: "Enter your Local Bottom identification rules here..."
   });
 
   const handleRuleChange = (category: keyof typeof rules, value: string) => {
@@ -17,32 +18,41 @@ export const Rules = () => {
   };
 
   return (
-    <div className="p-6 bg-white/80 backdrop-blur-sm rounded-lg animate-fadeIn">
+    <div className="p-6 bg-white/80 backdrop-blur-sm rounded-lg animate-fadeIn relative group">
+      <div className="absolute inset-0 -z-10 opacity-0 group-hover:opacity-100 blur-lg bg-[#9b87f5]/10 transition-opacity rounded-lg" />
       <h2 className="text-2xl font-semibold mb-6 text-gray-800">Trading Rules</h2>
-      <Tabs defaultValue="trading" className="w-full">
+      <Tabs defaultValue="majorTop" className="w-full">
         <TabsList className="mb-4">
-          <TabsTrigger value="trading">Trading</TabsTrigger>
-          <TabsTrigger value="risk">Risk Management</TabsTrigger>
-          <TabsTrigger value="psychology">Psychology</TabsTrigger>
+          <TabsTrigger value="majorTop">Major Top</TabsTrigger>
+          <TabsTrigger value="majorBottom">Major Bottom</TabsTrigger>
+          <TabsTrigger value="localTop">Local Top</TabsTrigger>
+          <TabsTrigger value="localBottom">Local Bottom</TabsTrigger>
         </TabsList>
-        <TabsContent value="trading">
+        <TabsContent value="majorTop">
           <Textarea
-            value={rules.trading}
-            onChange={(e) => handleRuleChange("trading", e.target.value)}
+            value={rules.majorTop}
+            onChange={(e) => handleRuleChange("majorTop", e.target.value)}
             className="min-h-[300px]"
           />
         </TabsContent>
-        <TabsContent value="risk">
+        <TabsContent value="majorBottom">
           <Textarea
-            value={rules.risk}
-            onChange={(e) => handleRuleChange("risk", e.target.value)}
+            value={rules.majorBottom}
+            onChange={(e) => handleRuleChange("majorBottom", e.target.value)}
             className="min-h-[300px]"
           />
         </TabsContent>
-        <TabsContent value="psychology">
+        <TabsContent value="localTop">
           <Textarea
-            value={rules.psychology}
-            onChange={(e) => handleRuleChange("psychology", e.target.value)}
+            value={rules.localTop}
+            onChange={(e) => handleRuleChange("localTop", e.target.value)}
+            className="min-h-[300px]"
+          />
+        </TabsContent>
+        <TabsContent value="localBottom">
+          <Textarea
+            value={rules.localBottom}
+            onChange={(e) => handleRuleChange("localBottom", e.target.value)}
             className="min-h-[300px]"
           />
         </TabsContent>
